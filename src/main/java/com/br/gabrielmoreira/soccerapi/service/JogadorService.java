@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class JogadorService {
@@ -29,6 +30,11 @@ public class JogadorService {
 
     public List<Jogador> findByTime(String time) {
         return jogadorRepository.findByTime(time);
+    }
+
+    public Jogador findById(Long id) {
+        return jogadorRepository.findByIdWithAssociations(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Jogador não encontrado com o id informado"));
     }
 
     @Transactional
