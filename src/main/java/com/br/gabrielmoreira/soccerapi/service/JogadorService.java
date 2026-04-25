@@ -17,6 +17,16 @@ public class JogadorService {
     }
 
     public List<Jogador> findByNome(String nome) {
-        return jogadorRepository.findByNome(nome).map(List::of).orElseGet(List::of);
+        return jogadorRepository.findByNome(nome);
     }
+
+    public List<Jogador> findAll() {
+        return jogadorRepository.findAll();
+    }
+
+    public List<Jogador> findByTime(String time) {
+        return jogadorRepository.findByTime(time);
+    }
+
+
 }
