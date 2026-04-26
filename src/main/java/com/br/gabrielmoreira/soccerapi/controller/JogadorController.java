@@ -34,6 +34,11 @@ public class JogadorController {
         return ResponseEntity.ok(jogadorService.findById(id));
     }
 
+    @GetMapping("/time/{time}")
+    public ResponseEntity<List<Jogador>> findByTime(@PathVariable String time) {
+        return ResponseEntity.ok(jogadorService.findByTime(time));
+    }
+
     @PostMapping
     @Operation(summary = "Registrar um novo jogador", description = "Endpoint para Registrar um novo jogador no sistema")
     @ApiResponse(responseCode = "200", description = "Jogador Registrado com sucesso")
