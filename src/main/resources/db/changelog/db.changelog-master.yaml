@@ -1,4 +1,4 @@
 databaseChangeLog:
   - include:
-      file: migrations/001-create-table-jogadores.sql
+      file: migrations/202604221456-create-table-jogadores.yaml
       relativeToChangelogFile: true

@@ -1,0 +1,35 @@
+databaseChangeLog:
+  - changeSet:
+      id: 202604251
+      author: gabriel
+      changes:
+        - createTable:
+            tableName: jogadores
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: nome
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: posicao
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: idade
+                  type: int
+                  constraints:
+                    nullable: false
+              - column:
+                  name: time
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
