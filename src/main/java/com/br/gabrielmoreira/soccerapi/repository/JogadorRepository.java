@@ -17,5 +17,5 @@ public interface JogadorRepository extends JpaRepository<Jogador, Long> {
 
     List<Jogador> findByNome(@Param("nome") String nome);
 
-    Optional<Jogador> findByIdWithAssociations(@Param("id") Long id);
+    Optional<Jogador> findById(@Param("id") Long id);
 }

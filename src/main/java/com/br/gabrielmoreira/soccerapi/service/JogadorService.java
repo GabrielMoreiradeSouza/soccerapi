@@ -33,7 +33,7 @@ public class JogadorService {
     }
 
     public Jogador findById(Long id) {
-        return jogadorRepository.findByIdWithAssociations(id)
+        return jogadorRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Jogador não encontrado com o id informado"));
     }
 
